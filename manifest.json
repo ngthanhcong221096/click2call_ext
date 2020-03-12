@@ -1,0 +1,25 @@
+{
+  "name": "Click to call ",
+  "description": "Click to call extension",
+  "version": "1.0",
+  "permissions": [
+    "http://*/*", "https://*/*","tabs","activeTab"
+  ],
+  "icons":{
+	"128":"on.png"
+  },
+  "browser_action": {
+      "default_title": "CLICK TO CALL",
+      "default_icon": "on.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+      {
+        "matches": ["https://dev-demo.cloudpbx.vn/*","https://ap15.lightning.force.com/*"],
+        "js": ["jquery3.2.1.min.js"]
+      }
+   ],
+  "manifest_version": 2
+}

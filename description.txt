@@ -1,0 +1,22 @@
+1. format style get phone number:
+RegExp("(^|\\s)([(])?([+]?)[.()]*[ ]?([0-9]{1,4})([)])?[. ()]*([0-9]{1,4})[. ()\\/]*([0-9]{1,4})[. ]*([0-9]{0,4})[. ]*([0-9]{0,4})[. ]*([0-9]{0,4})[. ]*([0-9]{0,4})($|\\s|[;,])", "g")
+0123456789 (10 or 11 number)
+0123 456789 (1 or 2 or 3 character space)
+3456789 (length phone >= 7)
++84123456798 (+84)
+(xx) 01. 2345 67789 (84 and space and dot)
+01.2345.6789 (1 or 2 or 3 dot)
+nodeType = Represents textual content in an element or attribute
+(^|\\s)([(])?([+]?)[.()]*[ ]?([0-9]{1,4})([)])?[. ()]*([0-9]{1,4})[. ()\\/]*([0-9]{1,4})[. ]*([0-9]{0,4})[. ]*([0-9]{0,4})[. ]*([0-9]{0,4})[. ]*([0-9]{0,4})($|\\s|[;,])
+
+word flow
+general -> 
+        run -> 
+            title -> 
+                  findReplace -> 
+                              IsPhoneNumber -> 
+                                            ReplaceSpace ->
+                                                         StringPhoneNumberReplace ->
+                                                                                  M ->
+                                                                                    PhoneLink ->
+                                                                                              titleTooltip ->                     MutationRecord
